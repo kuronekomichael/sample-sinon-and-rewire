@@ -1,7 +1,5 @@
-exports.getBase = () => {
-    return 5;
-}
+import * as other from './thirdparty' // ←テストのときだけ、こいつをモックに置き換えたい
 
 exports.getValue = () => {
-    return module.exports.getBase() + 1;
+    return other.getBase() + 1;
 };
